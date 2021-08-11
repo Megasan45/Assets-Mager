@@ -1,0 +1,43 @@
+{{!--Cabezote de la pagina, menu de navegacion--}}
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: #05050f;">
+  <div class="container-fluid">
+    <a class="navbar-brand">
+      <img src="/images/logo_white_small.png" alt="" width="50%" height="50%" class="align-text-middle">
+    </a>
+    <div class="d-flex" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        {{!--Search Assets--}}
+        <li class="nav-item" style="margin-right: 20px;">
+        <form class="form" action="/assets/search" method="POST">
+        <div class="input-group">
+          <select class="form-select" aria-label="Tipo de Operacion" name="Term" required>
+            <option value="arrendatario">Persona</option>
+            <option value="operacion">Operación</option>
+            <option value="municipio">Municipio</option>
+            <option value="barrio">Barrio</option>
+            <option value="valor">Valor</option>
+            <option value="fecha_pago">Fecha De Pago</option>
+          </select>
+          <input class="form-control" type="text" name="Search" placeholder="Buscar Bienes" aria-label="Busqueda" required>
+          <button class="btn btn-outline-primary" type="submit">Buscar</button>
+        </div>
+        </form>
+        </li>
+        {{!--Navbar buttons--}}
+        <li class="nav-item">
+          <a class="nav-link" href="/assets">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/assets/add">Agregar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/assets/next-list">Pagos Cercanos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">Cerrar Sesión</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+{{!--aria-current="page" class="nav-link active"--}}

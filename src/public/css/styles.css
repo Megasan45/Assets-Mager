@@ -1,0 +1,16 @@
+/*Contenedor principal de las secciones internas de la pagina*/
+.main-container {
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.Cuadro {
+    width: 30%;
+    height: 50%;
+    margin: auto;
+    padding-top: 25vh;
+    padding-bottom: 25vh;
+    text-align: center;
+    vertical-align: middle;
+  }

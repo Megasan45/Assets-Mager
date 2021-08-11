@@ -1,0 +1,74 @@
+{{!--Navegacion sin iniciar sesion--}}
+{{> ext-navbar }}
+{{!--Imagen de fondo--}}
+<div class="bg-image" style="
+background-image: url('/images/house.jpg');
+min-height: 100vh;
+background-size: cover;">
+    {{!--Mascara de transparencia--}}
+    <div class="mask" style="background-color: rgba(37, 37, 58, 0.4); min-height: 100vh;">
+        {{!--Recuadro con el formulario de ingreso--}}
+        <div class="Cuadro" style="padding-top: 8%;">
+        {{!--Tarjeta con los elementos--}}
+        <div class="card">
+        <div class="card-content" style="padding: 10px;">
+
+            {{!--Logo--}}
+            <h1 class="card-title">
+            <img src="/images/logoB_large.png" alt="" width="70%" height="70%" class="align-text-middle">
+            </h1>
+            {{!--Subtitulo--}}
+            <h4 class="card-subtitle text-muted" style="margin-bottom: 10px; margin-top: 5px;">Crear Cuenta</h4>
+
+            {{> assets-messages}}
+            
+            {{!--Formulario de ingreso--}} 
+            <form action="/signup" method="POST" style="width: 70%; margin: auto; margin-top: 10px; margin-bottom: 10px;">
+            
+            {{!--Usuario--}}
+            <div class="form-group" style="margin-bottom: 10px; text-align: left;">
+            <label for="Usuario" class="form-label">Nombre de Usuario:</label>
+            <div class="input-group">
+             <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                <input type="text" class="form-control" id="Fullname" name="fullname" required>
+            </div>
+            </div>
+
+            {{!--Correo--}}
+            <div class="form-group" style="margin-bottom: 10px; text-align: left;">
+            <label for="Usuario" class="form-label">Correo Electronico:</label>
+            <div class="input-group">
+             <span class="input-group-text"><i class="fas fa-at"></i></span>
+                <input type="email" class="form-control" id="Username" name="username" required>
+            </div>
+            </div>
+            
+            {{!--Contraseña--}}
+             <div class="form-group" style="margin-bottom: 10px; text-align: left;">
+            <label for="Contrasena" class="form-label">Contraseña:</label>
+            <div class="input-group">
+             <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                <input type="password" class="form-control" id="Password" name="password" required>
+            </div>
+            </div>
+
+            {{!--Validar Contraseña--}}
+             <div class="form-group" style="margin-bottom: 10px; text-align: left;">
+            <label for="Contrasena2" class="form-label">Confirme la contraseña:</label>
+            <div class="input-group">
+             <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                <input type="password" class="form-control" id="Password2" name="password2" required>
+            </div>
+            </div>
+
+            {{!--Boton para enviar--}}
+            <button style="margin-top: 5px;" class="btn btn-primary">Ingresar</button>
+            </form>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+{{!--Footer de la pagina--}}
+{{> footer }}

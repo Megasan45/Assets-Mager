@@ -1,0 +1,26 @@
+{{!--Navegacion sin iniciar sesion--}}
+{{> ext-navbar }}
+{{!--Imagen de fondo--}}
+<div class="bg-image" style="
+background-image: url('/images/Lake-House.jpg');
+min-height: 100vh;
+background-size: cover;">
+{{!--Mascara de transparencia--}}
+<div class="mask" style="background-color: rgba(16, 16, 39, 0.5); min-height: 100vh;">
+
+    {{!--Este contenedor es porque no veia como echar a andar el logo--}}
+    <div style="padding-top: 20vh; padding-bottom: 20vh;">
+    {{!--Aqui va el logo--}}
+    <div style="width: 50%;
+    text-align: center;
+    margin: auto;">
+    <img src="/images/logoB_white_large.png" alt="" width="100%" height="100%" class="align-text-middle"
+    style="border: 5px solid #ffffff; padding: 20px;">
+    </div>
+    </div>
+
+</div>
+</div>
+
+{{!--Footer de la pagina--}}
+{{> footer }}

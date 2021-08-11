@@ -1,0 +1,13 @@
+echo "# Assets-Mager" >> README.md
+git init
+git add .
+git commit -m "The Final Build"
+git branch -M main
+git remote add origin https://github.com/Megasan45/Assets-Mager.git
+git push -u origin main
+
+git branch -c page
+git push origin page
+
+heroku git:remote -a assets-mager
+git push heroku main

@@ -1,0 +1,31 @@
+{{!--Connect Flash messages for the assets--}}
+{{#if message}}
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="alert alert-danger alert-dissmissible fade show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    {{message}}
+                </div>
+            </div>
+        </div>
+    </div>
+{{/if}}
+
+{{!--Connect Flash messages for the assets--}}
+{{#if success}}
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-5 mx-auto">
+                <div class="alert alert-success alert-dissmissible fade show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    {{success}}
+                </div>
+            </div>
+        </div>
+    </div>
+{{/if}}

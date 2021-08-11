@@ -1,0 +1,413 @@
+{{!--Cabezote de la pagina, menu de navegacion--}}
+{{> navbar }}
+
+{{!--Imagen de fondo--}}
+<div class="bg-image" style="
+background-image: url('/images/Living-Room.jpg');
+min-height: 100vh;
+background-size: cover;">
+{{!--Mascara de transparencia--}}
+<div class="mask" style="background-color: rgba(37, 37, 58, 0.5); min-height: 100vh;">
+
+{{!--Contenedor principal--}}
+<div class="container p-4">
+
+  {{!--Card para el contenedor de de los elementos--}}
+  <div class="card">
+    {{!--header de la tarjeta--}}
+    <div class="card-header">
+      <div class="d-flex justify-content-center">
+      <h2 class="card-title">Detalles De La Propiedad</h2>
+      </div>
+    </div>
+
+  {{!--Cuerpo de la tarjeta--}}
+  <div class="card-body">
+
+  {{!--Segmento de 2 columnas--}}
+    <div class="row align-items-start">
+    
+    <div class="col">
+    {{!--Arrendatario--}}
+      <div class="form-group">
+        <label for="Arrendatario" class="form-label">Persona</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+          <input type="text" class="form-control" id="Arrendatario" value="{{Asset.arrendatario}}" disabled readonly>
+        </div>
+      </div>  
+    </div>
+    
+    <div class="col">
+    {{!--Operacion--}}
+    <div class="form-group">
+        <label for="Operacion" class="form-label">Operación</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-bank2"></i></span>
+          <input type="text" class="form-control" id="Operacion" value="{{Asset.operacion}}" disabled readonly>
+        </div>
+      </div>
+    </div>
+    
+    </div>
+
+    {{!--Segmento de 3 columnas--}}
+    <div class="row align-items-start">
+
+    <div class="col">
+    {{!--Municipio--}}
+      <div class="form-group">
+        <label for="Municipio" class="form-label">Municipio</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="fas fa-city"></i></span>
+          <input type="text" class="form-control" id="Municipio" value="{{Asset.municipio}}" disabled readonly>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+    {{!--Barrio--}}
+      <div class="form-group">
+        <label for="Barrio" class="form-label">Barrio</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-map-fill"></i></span>
+          <input type="text" class="form-control" id="Barrio" value="{{Asset.barrio}}" disabled readonly>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+    {{!--Direccion--}}
+      <div class="form-group">
+        <label for="Direccion" class="form-label">Dirección</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-signpost-fill"></i></span>
+          <input type="text" class="form-control" id="Direccion" value="{{Asset.direccion}}" disabled readonly>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+    {{!--Segmento de 5 columnas--}}
+    <div class="row align-items-start">
+
+    <div class="col">
+    {{!--Fecha De Pago--}}
+      <div class="form-group">
+        <label for="Fecha_Pago" class="form-label">Fecha De Pago</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+          <input type="text" class="form-control" id="Fecha_Pago" value="{{Asset.fecha_pago}}" disabled readonly>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+    {{!--Valor--}}
+      <div class="form-group">
+        <label for="Valor" class="form-label">Valor</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="fas fa-dollar-sign"></i><i class="fas fa-home"></i></span>
+          <input type="text" class="form-control" id="Valor" value="{{Asset.valor}}" disabled readonly>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+    {{!--Valor Daños--}}
+      <div class="form-group">
+        <label for="Valor_Danos" class="form-label">Valor En Daños</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="fas fa-dollar-sign"></i><i class="fas fa-house-damage"></i></span>
+          <input type="text" class="form-control" id="Valor_Danos" value="{{Asset.valor_danos}}" disabled readonly>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+    {{!--Valor Administracion--}}
+      <div class="form-group">
+        <label for="Valor_Admin" class="form-label">Coste Administración</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="fas fa-dollar-sign"></i><i class="fas fa-user-shield"></i></span>
+          <input type="text" class="form-control" id="Valor_Admin" value="{{Asset.valor_admin}}" disabled readonly>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+    {{!--Estrato--}}
+    <div class="form-group">
+        <label for="Estrato" class="form-label">Estrato</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-file-bar-graph"></i></span>
+          <input type="text" class="form-control" id="Estrato" value="{{Asset.estrato}}" disabled readonly>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+    {{!--Segmento de 5 columnas--}}
+    <div class="row align-items-start">
+    
+    <div class="col">
+    {{!--Numero de Alcobas--}}
+      <div class="form-group">
+        <label for="Alcobas" class="form-label">Numero de Alcobas</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-door-closed-fill"></i></span>
+          <input type="text" class="form-control" id="Alcobas" value="{{Asset.alcobas}}" disabled readonly>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+    {{!--Numero de Baños--}}
+      <div class="form-group">
+        <label for="Banios" class="form-label">Numero de Baños</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="fas fa-toilet-paper"></i></span>
+          <input type="text" class="form-control" id="Banios"value="{{Asset.banios}}" disabled readonly>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+    {{!--Garage--}}
+      <div class="form-group">
+        <label for="Garage" class="form-label">Garage</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="fas fa-car"></i></span>
+          <input type="text" class="form-control" id="Garage" value="{{Asset.garage}}" disabled readonly>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+    {{!--Piscina--}}
+      <div class="form-group">
+        <label for="Piscina" class="form-label">Piscina</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="fas fa-swimmer"></i></span>
+          <input type="text" class="form-control" id="Piscina" value="{{Asset.piscina}}" disabled readonly>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+    {{!--Cuarto Util--}}
+      <div class="form-group">
+        <label for="Cuarto_Util" class="form-label">Cuarto Útil</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="fas fa-toolbox"></i></span>
+          <input type="text" class="form-control" id="Cuarto_Util" value="{{Asset.cuarto_util}}" disabled readonly>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+    {{!--Segmento de 3 columnas--}}
+    <div class="row align-items-start">
+
+    <div class="col">
+    {{!--Unidad--}}
+      <div class="form-group">
+        <label for="Unidad" class="form-label">Tipo de Unidad</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="fas fa-warehouse"></i></span>
+          <input type="text" class="form-control" id="Unidad" value="{{Asset.unidad}}" disabled readonly>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+    {{!--Porteria 24h--}}
+      <div class="form-group">
+        <label for="Porteria24h" class="form-label">Porteria 24 Horas</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="fas fa-user-shield"></i></span>
+          <input type="text" class="form-control" id="Porteria24h" value="{{Asset.porteria24h}}" disabled readonly>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+    {{!--Vivienda--}}
+      <div class="form-group">
+        <label for="Vivienda" class="form-label">Tipo de Vivienda</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="fas fa-home"></i></span>
+          <input type="text" class="form-control" id="Vivienda" value="{{Asset.vivienda}}" disabled readonly>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+    {{!--Segmento de 3 columnas--}}
+    <div class="row align-items-start">
+
+    <div class="col">
+    {{!--Familia--}}
+      <div class="form-group">
+        <label for="Familia" class="form-label">Familias Que Habitan</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="fas fa-bed"></i></span>
+          <input type="text" class="form-control" id="Familia" value="{{Asset.familia}}" disabled readonly>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+    {{!--Servicios Incluidos--}}
+      <div class="form-group">
+        <label for="Servicios" class="form-label">Servicios Incluidos</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="fas fa-hand-holding-water"></i></span>
+          <input type="text" class="form-control" id="Servicios" value="{{Asset.servicios}}" disabled readonly>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+    {{!--Acceso a la red de Gas--}}
+      <div class="form-group">
+        <label for="Gas" class="form-label">Acceso A La Red De Gas</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="fas fa-burn"></i></span>
+          <input type="text" class="form-control" id="Gas" value="{{Asset.gas}}" disabled readonly>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+    {{!--Campos opcionales--}}
+    <div class="row align-items-middle">
+    <h5 class="card-subtitle text-muted d-flex justify-content-center mb-2">Información Adicional</h5>
+    </div>
+
+    {{!--Segmento de 4 columnas--}}
+    <div class="row align-items-start">
+
+    <div class="col">
+    {{!--Piso--}}
+      <div class="form-group">
+        <label for="Piso" class="form-label">Piso</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="fas fa-building"></i></span>
+          <input type="text" class="form-control" id="Piso" value="{{Asset.piso}}" disabled readonly>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col">
+    {{!--Ascensor--}}
+      <div class="form-group">
+        <label for="Ascensor" class="form-label">Ascensor</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="fas fa-caret-square-up"></i></span>
+          <input type="text" class="form-control" id="Ascensor" value="{{Asset.ascensor}}" disabled readonly>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+    {{!--Juegos Infantiles--}}
+      <div class="form-group">
+        <label for="Juegos" class="form-label">Juegos Infantiles</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="fas fa-puzzle-piece"></i></span>
+          <input type="text" class="form-control" id="Juegos" value="{{Asset.juegos}}" disabled readonly>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+    {{!--Areas Comunes--}}
+      <div class="form-group">
+        <label for="Areas_Comunes" class="form-label">Áreas Comunes</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="fas fa-tree"></i></span>
+            <input type="text" class="form-control" id="Areas_comunes" value="{{Asset.areas_comunes}}" disabled readonly>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+    {{!--Segmento de 4 columnas--}}
+    <div class="row align-items-start">
+    
+    <div class="col">
+    {{!--Area--}}
+      <div class="form-group">
+        <label for="Area" class="form-label">Área</label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="Area" value="{{Asset.area}}" disabled readonly>
+          <span class="input-group-text">m²</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+    {{!--Antiguedad--}}
+      <div class="form-group">
+        <label for="Antiguedad" class="form-label">Antigüedad</label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="Antiguedad" value="{{Asset.antiguedad}}" disabled readonly>
+          <span class="input-group-text">Años</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+    {{!--Constructora--}}
+      <div class="form-group">
+        <label for="Constructora" class="form-label">Constructora</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="fas fa-hard-hat"></i></span>
+          <input type="text" class="form-control" id="Constructora"value="{{Asset.constructora}}" disabled readonly>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+    {{!--Predial--}}
+      <div class="form-group">
+        <label for="Predial" class="form-label">Impuesto Predial</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="fas fa-dollar-sign"></i><i class="bi bi-bank2"></i></span>
+          <input type="text" class="form-control" id="Predial" value="{{Asset.predial}}" disabled readonly>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+    {{!--Descripcion--}}
+      <div class="form-group" style="margin-top: 7px;">
+        <label for="Descripcion" class="form-label">Descripción</label>
+        <textarea class="form-control" rows="5" id="Descripcion" disabled readonly>{{Asset.descripcion}}</textarea>
+      </div>
+
+    {{!--Boton de enviar--}}
+    {{!--Segmento de 2 columnas--}}
+        <div class="row" style="padding: 5px; margin-top: 10px;">
+          {{!--Boton de editar--}}
+          <div class="col d-flex justify-content-end"><a href="/assets/edit/{{Asset.ID}}" class="btn btn-secondary btn-lg">Editar</a></div>
+          {{!--Boon de borrar--}}
+          <div class="col d-flex justify-content-start"><a href="/assets/delete/{{Asset.ID}}" class="btn btn-danger btn-lg">Borrar</a></div>
+        </div>
+  </div>
+  
+  </div>
+</div>
+</div>
+</div>
+
+{{!--Footer de la pagina--}}
+{{> footer }}

@@ -1,0 +1,82 @@
+{{!--Cabezote de la pagina, menu de navegacion--}}
+{{> navbar }}
+
+{{!--Imagen de fondo--}}
+<div class="bg-image" style="
+background-image: url('/images/Living-Room.jpg');
+min-height: 100vh;
+background-size: cover;">
+{{!--Mascara de transparencia--}}
+<div class="mask" style="background-color: rgba(37, 37, 58, 0.5); min-height: 100vh;">
+
+{{!--Vista con las tarjetas de informacion--}}
+<div class="container p-4" style="width: 90%;">
+{{!--Tarjeta con el titulo--}}
+<div class="card">
+<div class="card-header" style="text-align: center;"><h2 class="card-title">Mis Propiedades</h5></div>
+
+{{!--Segmento principal--}}
+<div class="card-body bg-transparent" style="height: 85vh; width: 100%; overflow-y: auto;">
+
+  {{> assets-messages}}
+  <div class="row">
+  {{#each Assets}}
+  <div class="col col-3 p-3">
+    {{!--Card para el contenedor de de los elementos--}}
+    <div class="card">
+      {{!--header de la tarjeta--}}
+      <div class="card-header">
+      <h5 class="card-title">{{arrendatario}}</h5>
+      </div>
+      {{!--Cuerpo de la tarjeta--}}
+      <div>
+      {{!--Lista detalle--}}
+      <ul class="list-group list-group-flush">
+        {{!--Barrio--}}
+        <li class="list-group-item">
+          <h6 class="card-subtitle mb-2 text-muted">Ubicación</h6>
+          <p class="card-text">{{municipio}}, {{barrio}}</p>
+        </li>
+        {{!--Operacion--}}
+        <li class="list-group-item">
+          <h6 class="card-subtitle mb-2 text-muted">Operación</h6>
+          <p class="card-text">{{operacion}}</p>
+        </li>
+        {{!--Valor--}}
+        <li class="list-group-item">
+          <h6 class="card-subtitle mb-2 text-muted">Valor</h6>
+          <p class="card-text">{{valor}}$</p>
+        </li>
+        {{!--Fecha de pago--}}
+        <li class="list-group-item">
+          <h6 class="card-subtitle mb-2 text-muted">Fecha De Pago</h6>
+          <p class="card-text">{{fecha_pago}}</p>
+        </li>
+
+        {{!--Segmento de 2 columnas--}}
+        <div class="row" style="padding: 5px;">
+          {{!--Boton de ver--}}
+          <div class="col d-flex justify-content-center"><a href="/assets/detail/{{ID}}" class="btn btn-secondary btn-block">Ver Detalles</a></div>
+        </div>
+      </ul>
+    </div>
+  </div>
+  </div>
+  {{else}}
+  <div class="d-flex justify-content-center">
+    <div class="card col-6">
+        <div class="card-body text-center">
+            <p>Actualmente no tiene propiedades registradas en la base de datos, agregue algunas</p>
+        </div>
+    </div>
+  </div>
+  {{/each}}
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+{{!--Footer de la pagina--}}
+{{> footer }}
