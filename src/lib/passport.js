@@ -18,10 +18,10 @@ passport.use('local.login', new LocalStrategy({
             {
              done(null, user, req.flash('success', 'Bienvenid@ ' + user.fullname));
             }
-         else   {done(null, false, req.flash('message', 'Contraseña erronea'));}
+         else   {done(null, false, req.flash('message', 'Contraseña Errónea'));}
         }
     
-    else   {done(null, false, req.flash('message', 'Usuario no encontrado'));}
+    else   {done(null, false, req.flash('message', 'Usuario No Encontrado'));}
 }));
 
 //Configuracion del objeto para el registro
